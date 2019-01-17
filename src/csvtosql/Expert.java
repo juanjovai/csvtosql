@@ -93,12 +93,14 @@ public class Expert {
         // es vacía, debe devolver true. Si contiene datos, es porque hubo error al procesar
         // devuelve false
         
-        //armo la query para eliminar los registros copiados correctamente a la tabla de usuarios y los que no se copiaron pero corresponden a usuarios sin cuenta en AD
+        //armo la query para eliminar los registros copiados correctamente a la tabla de usuarios y 
+        //los que no se copiaron pero corresponden a usuarios sin cuenta en AD
         String query1 = "DELETE FROM idmhr.intermedia WHERE flag_registro_copiado = 'true' OR flag_cuenta_ad = 'false'";
         //Ejecuto la query
         cliente.execUpdate(query1);
         
-        //armo la query para determinar si se borraron todos los registro de la tabla intermedia, lo cual significaria que la copia fue exitosa
+        //armo la query para determinar si se borraron todos los registro de la tabla intermedia, 
+        //lo cual significaria que la copia fue exitosa
         String query2 = "SELECT COUNT(pk_id_user) FROM idmhr.intermedia";
         ResultSet rs = cliente.execQuery(query2);
 
