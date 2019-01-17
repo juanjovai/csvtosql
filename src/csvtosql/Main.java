@@ -26,15 +26,10 @@ public class Main {
                     }
                 }
            }
-       }
-       
-        //client.execQuery("COPY tabla_intermedia(nombre,apellido,edad)  FROM '/home/marcos/Escritorio/test.csv' WITH (Format csv);");
-        
+       }       
+                
        //IndireccionPersistencia
        GetPropertyValues properties = new GetPropertyValues();
-       properties.getPropValues();
-
-        //client.execQuery("COPY tabla_intermedia(nombre,apellido,edad)  FROM '/home/marcos/Escritorio/test.csv' WITH (Format csv);");
+       properties.getPropValues();       
     }
-    
 }
