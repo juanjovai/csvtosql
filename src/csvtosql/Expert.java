@@ -65,7 +65,8 @@ public class Expert {
         String line;
             while((line=br.readLine())!=null){
                 System.out.println("Analizando: " + line);
-                String pattern = "(\\s?(\\w*@\\w*\\.)*(\\d*-\\d*-\\d*)*\\w*\\s?\\w*\\.*\\s?,\\s?(\\w*@\\w*\\.)*(\\d*-\\d*-\\d*)*\\w*\\s?\\w*\\.*\\s?)+"; //Regexp a aplicar
+                String pattern = "(\\s?(\\w*@\\w*\\.)*(\\d*-\\d*-\\d*)*\\w*\\s?\\w*\\.*\\s?,
+                \\s?(\\w*@\\w*\\.)*(\\d*-\\d*-\\d*)*\\w*\\s?\\w*\\.*\\s?)+"; //Regexp a aplicar
              
                 if(!line.matches(pattern)){
                     return false;
